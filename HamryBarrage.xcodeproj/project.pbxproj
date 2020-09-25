@@ -15,6 +15,9 @@
 		207CD6B6251DD25500C8784A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207CD6B4251DD25500C8784A /* LaunchScreen.storyboard */; };
 		207CD6C1251DD25500C8784A /* HamryBarrageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CD6C0251DD25500C8784A /* HamryBarrageTests.swift */; };
 		207CD6CC251DD25500C8784A /* HamryBarrageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CD6CB251DD25500C8784A /* HamryBarrageUITests.swift */; };
+		2096F2EC251DD2FB009A7E94 /* HamryBarrageCanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2096F2EB251DD2FB009A7E94 /* HamryBarrageCanvasViewController.swift */; };
+		2096F2EE251DD387009A7E94 /* HamryBarrageItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2096F2ED251DD387009A7E94 /* HamryBarrageItemView.swift */; };
+		2096F2F0251DD45F009A7E94 /* HamryBarrageRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2096F2EF251DD45F009A7E94 /* HamryBarrageRule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		207CD6C7251DD25500C8784A /* HamryBarrageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HamryBarrageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		207CD6CB251DD25500C8784A /* HamryBarrageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamryBarrageUITests.swift; sourceTree = "<group>"; };
 		207CD6CD251DD25500C8784A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2096F2EB251DD2FB009A7E94 /* HamryBarrageCanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamryBarrageCanvasViewController.swift; sourceTree = "<group>"; };
+		2096F2ED251DD387009A7E94 /* HamryBarrageItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamryBarrageItemView.swift; sourceTree = "<group>"; };
+		2096F2EF251DD45F009A7E94 /* HamryBarrageRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamryBarrageRule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		207CD6A8251DD25000C8784A /* HamryBarrage */ = {
 			isa = PBXGroup;
 			children = (
+				2096F2EA251DD2C7009A7E94 /* Barrage */,
 				207CD6A9251DD25000C8784A /* AppDelegate.swift */,
 				207CD6AB251DD25000C8784A /* SceneDelegate.swift */,
 				207CD6AD251DD25000C8784A /* ContentView.swift */,
@@ -134,6 +141,16 @@
 				207CD6CD251DD25500C8784A /* Info.plist */,
 			);
 			path = HamryBarrageUITests;
+			sourceTree = "<group>";
+		};
+		2096F2EA251DD2C7009A7E94 /* Barrage */ = {
+			isa = PBXGroup;
+			children = (
+				2096F2EB251DD2FB009A7E94 /* HamryBarrageCanvasViewController.swift */,
+				2096F2ED251DD387009A7E94 /* HamryBarrageItemView.swift */,
+				2096F2EF251DD45F009A7E94 /* HamryBarrageRule.swift */,
+			);
+			path = Barrage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,9 +284,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2096F2F0251DD45F009A7E94 /* HamryBarrageRule.swift in Sources */,
 				207CD6AA251DD25000C8784A /* AppDelegate.swift in Sources */,
 				207CD6AC251DD25000C8784A /* SceneDelegate.swift in Sources */,
+				2096F2EE251DD387009A7E94 /* HamryBarrageItemView.swift in Sources */,
 				207CD6AE251DD25000C8784A /* ContentView.swift in Sources */,
+				2096F2EC251DD2FB009A7E94 /* HamryBarrageCanvasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +456,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HamryBarrage/Preview Content\"";
+				DEVELOPMENT_TEAM = 5CBDJXL33W;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HamryBarrage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -455,6 +476,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HamryBarrage/Preview Content\"";
+				DEVELOPMENT_TEAM = 5CBDJXL33W;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HamryBarrage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
