@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		207CD6AA251DD25000C8784A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CD6A9251DD25000C8784A /* AppDelegate.swift */; };
+		207CD6AC251DD25000C8784A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CD6AB251DD25000C8784A /* SceneDelegate.swift */; };
+		207CD6AE251DD25000C8784A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CD6AD251DD25000C8784A /* ContentView.swift */; };
+		207CD6B0251DD25500C8784A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207CD6AF251DD25500C8784A /* Assets.xcassets */; };
+		207CD6B3251DD25500C8784A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207CD6B2251DD25500C8784A /* Preview Assets.xcassets */; };
+		207CD6B6251DD25500C8784A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207CD6B4251DD25500C8784A /* LaunchScreen.storyboard */; };
+		207CD6C1251DD25500C8784A /* HamryBarrageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CD6C0251DD25500C8784A /* HamryBarrageTests.swift */; };
+		207CD6CC251DD25500C8784A /* HamryBarrageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CD6CB251DD25500C8784A /* HamryBarrageUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		207CD6BD251DD25500C8784A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 207CD69E251DD24F00C8784A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 207CD6A5251DD25000C8784A;
+			remoteInfo = HamryBarrage;
+		};
+		207CD6C8251DD25500C8784A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 207CD69E251DD24F00C8784A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 207CD6A5251DD25000C8784A;
+			remoteInfo = HamryBarrage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		207CD6A6251DD25000C8784A /* HamryBarrage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HamryBarrage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		207CD6A9251DD25000C8784A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		207CD6AB251DD25000C8784A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		207CD6AD251DD25000C8784A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		207CD6AF251DD25500C8784A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		207CD6B2251DD25500C8784A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		207CD6B5251DD25500C8784A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		207CD6B7251DD25500C8784A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		207CD6BC251DD25500C8784A /* HamryBarrageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HamryBarrageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		207CD6C0251DD25500C8784A /* HamryBarrageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamryBarrageTests.swift; sourceTree = "<group>"; };
+		207CD6C2251DD25500C8784A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		207CD6C7251DD25500C8784A /* HamryBarrageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HamryBarrageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		207CD6CB251DD25500C8784A /* HamryBarrageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamryBarrageUITests.swift; sourceTree = "<group>"; };
+		207CD6CD251DD25500C8784A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		207CD6A3251DD25000C8784A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207CD6B9251DD25500C8784A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207CD6C4251DD25500C8784A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		207CD69D251DD24F00C8784A = {
+			isa = PBXGroup;
+			children = (
+				207CD6A8251DD25000C8784A /* HamryBarrage */,
+				207CD6BF251DD25500C8784A /* HamryBarrageTests */,
+				207CD6CA251DD25500C8784A /* HamryBarrageUITests */,
+				207CD6A7251DD25000C8784A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		207CD6A7251DD25000C8784A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				207CD6A6251DD25000C8784A /* HamryBarrage.app */,
+				207CD6BC251DD25500C8784A /* HamryBarrageTests.xctest */,
+				207CD6C7251DD25500C8784A /* HamryBarrageUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		207CD6A8251DD25000C8784A /* HamryBarrage */ = {
+			isa = PBXGroup;
+			children = (
+				207CD6A9251DD25000C8784A /* AppDelegate.swift */,
+				207CD6AB251DD25000C8784A /* SceneDelegate.swift */,
+				207CD6AD251DD25000C8784A /* ContentView.swift */,
+				207CD6AF251DD25500C8784A /* Assets.xcassets */,
+				207CD6B4251DD25500C8784A /* LaunchScreen.storyboard */,
+				207CD6B7251DD25500C8784A /* Info.plist */,
+				207CD6B1251DD25500C8784A /* Preview Content */,
+			);
+			path = HamryBarrage;
+			sourceTree = "<group>";
+		};
+		207CD6B1251DD25500C8784A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				207CD6B2251DD25500C8784A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		207CD6BF251DD25500C8784A /* HamryBarrageTests */ = {
+			isa = PBXGroup;
+			children = (
+				207CD6C0251DD25500C8784A /* HamryBarrageTests.swift */,
+				207CD6C2251DD25500C8784A /* Info.plist */,
+			);
+			path = HamryBarrageTests;
+			sourceTree = "<group>";
+		};
+		207CD6CA251DD25500C8784A /* HamryBarrageUITests */ = {
+			isa = PBXGroup;
+			children = (
+				207CD6CB251DD25500C8784A /* HamryBarrageUITests.swift */,
+				207CD6CD251DD25500C8784A /* Info.plist */,
+			);
+			path = HamryBarrageUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		207CD6A5251DD25000C8784A /* HamryBarrage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 207CD6D0251DD25500C8784A /* Build configuration list for PBXNativeTarget "HamryBarrage" */;
+			buildPhases = (
+				207CD6A2251DD25000C8784A /* Sources */,
+				207CD6A3251DD25000C8784A /* Frameworks */,
+				207CD6A4251DD25000C8784A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HamryBarrage;
+			productName = HamryBarrage;
+			productReference = 207CD6A6251DD25000C8784A /* HamryBarrage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		207CD6BB251DD25500C8784A /* HamryBarrageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 207CD6D3251DD25500C8784A /* Build configuration list for PBXNativeTarget "HamryBarrageTests" */;
+			buildPhases = (
+				207CD6B8251DD25500C8784A /* Sources */,
+				207CD6B9251DD25500C8784A /* Frameworks */,
+				207CD6BA251DD25500C8784A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				207CD6BE251DD25500C8784A /* PBXTargetDependency */,
+			);
+			name = HamryBarrageTests;
+			productName = HamryBarrageTests;
+			productReference = 207CD6BC251DD25500C8784A /* HamryBarrageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		207CD6C6251DD25500C8784A /* HamryBarrageUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 207CD6D6251DD25500C8784A /* Build configuration list for PBXNativeTarget "HamryBarrageUITests" */;
+			buildPhases = (
+				207CD6C3251DD25500C8784A /* Sources */,
+				207CD6C4251DD25500C8784A /* Frameworks */,
+				207CD6C5251DD25500C8784A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				207CD6C9251DD25500C8784A /* PBXTargetDependency */,
+			);
+			name = HamryBarrageUITests;
+			productName = HamryBarrageUITests;
+			productReference = 207CD6C7251DD25500C8784A /* HamryBarrageUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		207CD69E251DD24F00C8784A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = Hamry;
+				TargetAttributes = {
+					207CD6A5251DD25000C8784A = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					207CD6BB251DD25500C8784A = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 207CD6A5251DD25000C8784A;
+					};
+					207CD6C6251DD25500C8784A = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 207CD6A5251DD25000C8784A;
+					};
+				};
+			};
+			buildConfigurationList = 207CD6A1251DD24F00C8784A /* Build configuration list for PBXProject "HamryBarrage" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 207CD69D251DD24F00C8784A;
+			productRefGroup = 207CD6A7251DD25000C8784A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				207CD6A5251DD25000C8784A /* HamryBarrage */,
+				207CD6BB251DD25500C8784A /* HamryBarrageTests */,
+				207CD6C6251DD25500C8784A /* HamryBarrageUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		207CD6A4251DD25000C8784A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207CD6B6251DD25500C8784A /* LaunchScreen.storyboard in Resources */,
+				207CD6B3251DD25500C8784A /* Preview Assets.xcassets in Resources */,
+				207CD6B0251DD25500C8784A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207CD6BA251DD25500C8784A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207CD6C5251DD25500C8784A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		207CD6A2251DD25000C8784A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207CD6AA251DD25000C8784A /* AppDelegate.swift in Sources */,
+				207CD6AC251DD25000C8784A /* SceneDelegate.swift in Sources */,
+				207CD6AE251DD25000C8784A /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207CD6B8251DD25500C8784A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207CD6C1251DD25500C8784A /* HamryBarrageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207CD6C3251DD25500C8784A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207CD6CC251DD25500C8784A /* HamryBarrageUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		207CD6BE251DD25500C8784A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 207CD6A5251DD25000C8784A /* HamryBarrage */;
+			targetProxy = 207CD6BD251DD25500C8784A /* PBXContainerItemProxy */;
+		};
+		207CD6C9251DD25500C8784A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 207CD6A5251DD25000C8784A /* HamryBarrage */;
+			targetProxy = 207CD6C8251DD25500C8784A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		207CD6B4251DD25500C8784A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				207CD6B5251DD25500C8784A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		207CD6CE251DD25500C8784A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		207CD6CF251DD25500C8784A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		207CD6D1251DD25500C8784A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"HamryBarrage/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = HamryBarrage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Hamry.HamryBarrage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		207CD6D2251DD25500C8784A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"HamryBarrage/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = HamryBarrage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Hamry.HamryBarrage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		207CD6D4251DD25500C8784A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HamryBarrageTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Hamry.HamryBarrageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HamryBarrage.app/HamryBarrage";
+			};
+			name = Debug;
+		};
+		207CD6D5251DD25500C8784A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HamryBarrageTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Hamry.HamryBarrageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HamryBarrage.app/HamryBarrage";
+			};
+			name = Release;
+		};
+		207CD6D7251DD25500C8784A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HamryBarrageUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Hamry.HamryBarrageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HamryBarrage;
+			};
+			name = Debug;
+		};
+		207CD6D8251DD25500C8784A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HamryBarrageUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Hamry.HamryBarrageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HamryBarrage;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		207CD6A1251DD24F00C8784A /* Build configuration list for PBXProject "HamryBarrage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				207CD6CE251DD25500C8784A /* Debug */,
+				207CD6CF251DD25500C8784A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		207CD6D0251DD25500C8784A /* Build configuration list for PBXNativeTarget "HamryBarrage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				207CD6D1251DD25500C8784A /* Debug */,
+				207CD6D2251DD25500C8784A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		207CD6D3251DD25500C8784A /* Build configuration list for PBXNativeTarget "HamryBarrageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				207CD6D4251DD25500C8784A /* Debug */,
+				207CD6D5251DD25500C8784A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		207CD6D6251DD25500C8784A /* Build configuration list for PBXNativeTarget "HamryBarrageUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				207CD6D7251DD25500C8784A /* Debug */,
+				207CD6D8251DD25500C8784A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 207CD69E251DD24F00C8784A /* Project object */;
+}
