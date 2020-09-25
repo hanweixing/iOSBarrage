@@ -33,35 +33,37 @@ class HamryBarrageCanvasViewController: UIViewController {
     }
     @objc func startBarrageTimer() {
         DispatchQueue.main.async {
+            // 新增要添加的弹幕.
+            let needGiveNewBarragePtArr = self.findAllNeedGiveNewBarragePtArr()
+            print("++++需要添加\(needGiveNewBarragePtArr.count)条弹幕")
+            assert(self.view.subviews.count <= 70)
+            for iterator in 0..<needGiveNewBarragePtArr.count {
+                let barragePt = needGiveNewBarragePtArr[iterator]
+                let itemData = HarmryBarrageItemData.init(title: "++\(iterator)随机序号的弹幕")
+                let barrageView = self.createBarrage(itemData: itemData)
+                let barrageFrame = CGRect.init(origin: barragePt, size: barrageView.barrageItemSize())
+                barrageView.frame = barrageFrame
+                if let itemView = barrageView as? HamryBarrageItemView {
+                    itemView.delegate = self
+                }
+                barrageView.sizeToFit()
+                if barrageView.superview == nil {
+                    self.view.addSubview(barrageView)
+                }
+            }
             // 让所有的已有弹幕向前进.
-                    let allBarrageInScreen = self.view.subviews.filter({ $0 is UIView&HamryBarrageItemProtocol })
-            print("+++++++++========")
+            let allBarrageInScreen = self.view.subviews.filter({ $0 is UIView&HamryBarrageItemProtocol }).filter({ $0.frame.maxX >= 0 })
+            print("++++所有屏幕上的弹幕")
+            print(allBarrageInScreen.count)
+            print("++++复用的弹幕")
             print(self.reuseBarrageViewArr.count)
-                    for barrage in allBarrageInScreen {
-                        let newRect = CGRect(x: barrage.frame.minX - 1, y: barrage.frame.minY, width: barrage.bounds.width, height: barrage.bounds.height)
-            //            UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
-                            barrage.frame = newRect
-            //            }, completion: { [weak self] finished in
-                            if self.judgeBarrageIsOutOfCanvas(barrageFrame: newRect) == true {
-                                barrage.removeFromSuperview()
-                                self.collectBarrageView(view: barrage as! (UIView&HamryBarrageItemProtocol))
-                            }
-            //            })
-                    }
-                    // 新增要添加的弹幕.
-                    let needGiveNewBarragePtArr = self.findAllNeedGiveNewBarragePtArr()
-                    for iterator in 0..<needGiveNewBarragePtArr.count {
-                        let barragePt = needGiveNewBarragePtArr[iterator]
-                        let itemData = HarmryBarrageItemData.init(title: "++\(iterator)随机序号的弹幕")
-                        let barrageView = self.createBarrage(itemData: itemData)
-                        let barrageFrame = CGRect.init(origin: barragePt, size: barrageView.barrageItemSize())
-                        barrageView.frame = barrageFrame
-                        if let itemView = barrageView as? HamryBarrageItemView {
-                            itemView.delegate = self
-                        }
-                        barrageView.sizeToFit()
-                        self.view.addSubview(barrageView)
-                    }
+            for barrage in allBarrageInScreen {
+                let newRect = CGRect(x: barrage.frame.minX - 1, y: barrage.frame.minY, width: barrage.bounds.width, height: barrage.bounds.height)
+                barrage.frame = newRect
+                if self.judgeBarrageIsOutOfCanvas(barrageFrame: newRect) == true {
+                    self.collectBarrageView(view: barrage as! (UIView&HamryBarrageItemProtocol))
+                }
+            }
         }
     }
 }
@@ -70,11 +72,13 @@ extension HamryBarrageCanvasViewController {
     
     /// 找出所有需要补上新弹幕的Pt.
     private func findAllNeedGiveNewBarragePtArr() -> [CGPoint] {
-        let allSubFrameArr = self.view.subviews.filter({ $0 is HamryBarrageItemProtocol }).compactMap({ $0.frame })
+        let allSubFrameArr = self.view.subviews.filter({ $0 is HamryBarrageItemProtocol }).filter({ $0.frame.maxX >= 0 }).compactMap({ $0.frame })
         var eachLineLastViewFrameArr: [CGRect] = []
         for rect in allSubFrameArr {
             if let lastViewInTheSameLine = allSubFrameArr.filter({ $0.minY == rect.minY }).last {
-                eachLineLastViewFrameArr.append(lastViewInTheSameLine)
+                if eachLineLastViewFrameArr.contains(where: { $0.minY == rect.minY }) == false {
+                    eachLineLastViewFrameArr.append(lastViewInTheSameLine)
+                }
             }
         }
         // 判断每一条轨道最后一个弹幕之后是否需要补上一个新的弹幕.
@@ -107,6 +111,7 @@ extension HamryBarrageCanvasViewController {
         } else {
             barrageView = HamryBarrageItemView()
             barrageView.updateBarrageItemData(data: itemData)
+            print("-----alloc了一个弹幕")
         }
         return barrageView
     }
