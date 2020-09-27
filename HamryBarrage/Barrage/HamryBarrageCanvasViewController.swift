@@ -33,6 +33,20 @@ class HamryBarrageCanvasViewController: UIViewController {
     }
     @objc func startBarrageTimer() {
         DispatchQueue.main.async {
+            // 让所有的已有弹幕向前进.
+            let allBarrageInScreen = self.view.subviews.filter({ $0 is UIView&HamryBarrageItemProtocol }).filter({ $0.frame.maxX >= 0 })
+            print("++++所有屏幕上的弹幕")
+            print(allBarrageInScreen.count)
+            print("++++复用的弹幕")
+            print(self.reuseBarrageViewArr.count)
+            for barrage in allBarrageInScreen {
+                let newRect = CGRect(x: barrage.frame.minX - 1, y: barrage.frame.minY, width: barrage.bounds.width, height: barrage.bounds.height)
+                barrage.frame = newRect
+                if self.judgeBarrageIsOutOfCanvas(barrageFrame: newRect) == true {
+                    barrage.removeFromSuperview()
+                    self.collectBarrageView(view: barrage as! (UIView&HamryBarrageItemProtocol))
+                }
+            }
             // 新增要添加的弹幕.
             let needGiveNewBarragePtArr = self.findAllNeedGiveNewBarragePtArr()
             print("++++需要添加\(needGiveNewBarragePtArr.count)条弹幕")
@@ -49,19 +63,6 @@ class HamryBarrageCanvasViewController: UIViewController {
                 barrageView.sizeToFit()
                 if barrageView.superview == nil {
                     self.view.addSubview(barrageView)
-                }
-            }
-            // 让所有的已有弹幕向前进.
-            let allBarrageInScreen = self.view.subviews.filter({ $0 is UIView&HamryBarrageItemProtocol }).filter({ $0.frame.maxX >= 0 })
-            print("++++所有屏幕上的弹幕")
-            print(allBarrageInScreen.count)
-            print("++++复用的弹幕")
-            print(self.reuseBarrageViewArr.count)
-            for barrage in allBarrageInScreen {
-                let newRect = CGRect(x: barrage.frame.minX - 1, y: barrage.frame.minY, width: barrage.bounds.width, height: barrage.bounds.height)
-                barrage.frame = newRect
-                if self.judgeBarrageIsOutOfCanvas(barrageFrame: newRect) == true {
-                    self.collectBarrageView(view: barrage as! (UIView&HamryBarrageItemProtocol))
                 }
             }
         }
