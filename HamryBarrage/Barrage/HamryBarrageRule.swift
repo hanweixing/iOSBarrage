@@ -10,15 +10,12 @@ import Foundation
 import UIKit
 
 protocol HamryBarrageItemProtocol {
-    func updateBarrageItemData(data: HarmryBarrageItemData)
+    func updateBarrageItemData(data: Any?)
     func barrageItemSize() -> CGSize
 }
 
 protocol HarmyBarrageCollectorProtocol: class {
     func collectBarrageView(view: UIView&HamryBarrageItemProtocol)
     func judgeBarrageIsOutOfCanvas(barrageFrame: CGRect) -> Bool
-}
-
-struct HarmryBarrageItemData {
-    var title: String = ""
+    func emitAnBarrageItemData() -> Any?
 }

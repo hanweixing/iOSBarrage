@@ -27,7 +27,7 @@ class HamryBarrageCanvasViewController: UIViewController {
         self.barrageTimer?.invalidate()
         self.barrageTimer = nil
         self.barrageTimer = CADisplayLink(target: self, selector: #selector(startBarrageTimer))
-        self.barrageTimer?.preferredFramesPerSecond = 30
+        self.barrageTimer?.preferredFramesPerSecond = 120
         self.barrageTimer?.add(to: RunLoop.main, forMode: .default)
         self.barrageTimer?.add(to: RunLoop.main, forMode: .tracking)
     }
@@ -50,11 +50,10 @@ class HamryBarrageCanvasViewController: UIViewController {
             // 新增要添加的弹幕.
             let needGiveNewBarragePtArr = self.findAllNeedGiveNewBarragePtArr()
             print("++++需要添加\(needGiveNewBarragePtArr.count)条弹幕")
-            assert(self.view.subviews.count <= 70)
+//            assert(self.view.subviews.count <= 70)
             for iterator in 0..<needGiveNewBarragePtArr.count {
                 let barragePt = needGiveNewBarragePtArr[iterator]
-                let itemData = HarmryBarrageItemData.init(title: "++\(iterator)随机序号的弹幕")
-                let barrageView = self.createBarrage(itemData: itemData)
+                let barrageView = self.createBarrage()
                 let barrageFrame = CGRect.init(origin: barragePt, size: barrageView.barrageItemSize())
                 barrageView.frame = barrageFrame
                 if let itemView = barrageView as? HamryBarrageItemView {
@@ -70,10 +69,9 @@ class HamryBarrageCanvasViewController: UIViewController {
 }
 
 extension HamryBarrageCanvasViewController {
-    
     /// 找出所有需要补上新弹幕的Pt.
     private func findAllNeedGiveNewBarragePtArr() -> [CGPoint] {
-        let allSubFrameArr = self.view.subviews.filter({ $0 is HamryBarrageItemProtocol }).filter({ $0.frame.maxX >= 0 }).compactMap({ $0.frame })
+        let allSubFrameArr = self.view.subviews.filter({ $0 is HamryBarrageItemProtocol }).filter({ $0.frame.maxX >= 0 && $0.frame.maxY <= self.view.frame.height }).compactMap({ $0.frame })
         var eachLineLastViewFrameArr: [CGRect] = []
         for rect in allSubFrameArr {
             if let lastViewInTheSameLine = allSubFrameArr.filter({ $0.minY == rect.minY }).last {
@@ -90,29 +88,35 @@ extension HamryBarrageCanvasViewController {
             }
         }
         // 找到离底部最近的那条弹幕的frame.以此来判断是否从最后的这个rect到底部需要新增轨道.
-        var maxYViewFrame: CGRect = .zero
+        var maxYViewFrame: CGRect = eachLineLastViewFrameArr.first ?? CGRect.zero
         for rect in eachLineLastViewFrameArr {
             if rect.minY > maxYViewFrame.minY {
                 maxYViewFrame = rect
             }
         }
-        let needAddNewLineCount: Int = Int((self.view.frame.height - maxYViewFrame.maxY) / (HamryBarrageCanvasViewController.barrageLineHeight + HamryBarrageCanvasViewController.barrageLineGapSpacing))
-        var upPt = maxYViewFrame.origin
+        let needAddNewLineCount: Int = max(0, Int((self.view.frame.height - maxYViewFrame.maxY) / (HamryBarrageCanvasViewController.barrageLineHeight + HamryBarrageCanvasViewController.barrageLineGapSpacing)))
+        var upBarrageBottomY = maxYViewFrame.maxY
+        if upBarrageBottomY == 0 {
+            upBarrageBottomY = -HamryBarrageCanvasViewController.barrageLineGapSpacing
+        }
         for _ in 0..<needAddNewLineCount {
-            let nextPt = CGPoint(x: self.view.bounds.width, y: upPt.y + HamryBarrageCanvasViewController.barrageLineHeight + HamryBarrageCanvasViewController.barrageLineGapSpacing)
+            let nextPt = CGPoint(x: self.view.bounds.width, y: upBarrageBottomY + HamryBarrageCanvasViewController.barrageLineGapSpacing)
             needGiveBarrage.append(nextPt)
-            upPt = nextPt
+            upBarrageBottomY = nextPt.y + HamryBarrageCanvasViewController.barrageLineHeight
         }
         return needGiveBarrage
     }
-    private func createBarrage(itemData: HarmryBarrageItemData) -> UIView&HamryBarrageItemProtocol {
+    private func createBarrage() -> UIView&HamryBarrageItemProtocol {
+        let itemData = self.emitAnBarrageItemData()
         var barrageView: UIView&HamryBarrageItemProtocol
         if let view = self.reuseBarrageViewArr.popLast() {
             barrageView = view
         } else {
             barrageView = HamryBarrageItemView()
-            barrageView.updateBarrageItemData(data: itemData)
             print("-----alloc了一个弹幕")
+        }
+        if let _itemData = itemData, let _barrageView = barrageView as? HamryBarrageItemView {
+            _barrageView.updateBarrageItemData(data: _itemData)
         }
         return barrageView
     }
@@ -127,5 +131,9 @@ extension HamryBarrageCanvasViewController: HarmyBarrageCollectorProtocol {
             return true
         }
         return false
+    }
+    func emitAnBarrageItemData() -> Any? {
+        let barrageItemData = HamryBarrageItemData.init(icon: "https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png", content: "第\(arc4random()%100)条弹幕")
+        return barrageItemData
     }
 }
